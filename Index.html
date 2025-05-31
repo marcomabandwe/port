@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marco</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: url('https://images.unsplash.com/photo-1518770660439-4636190af475?fit=crop&w=1600&q=80') no-repeat center center fixed;
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            min-height: 100vh;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+            font-family: Arial, sans-serif;
+        }
+
+        nav {
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.6);
+            display: flex;
+            justify-content: center;
+            padding: 10px 0;
+            position: fixed;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 20px;
+            text-decoration: none;
+            font-size: 1.2em;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: yellow;
+        }
+
+        h1 {
+            font-size: 3em;
+            margin-top: 100px;
+            margin-bottom: 20px;
+        }
+
+        a.marco-link {
+            font-size: 1.5em;
+            text-decoration: none;
+            color: #fff;
+            animation: clignote 1s infinite;
+        }
+
+        @keyframes clignote {
+            0%   { color: red; }
+            25%  { color: yellow; }
+            50%  { color: green; }
+            75%  { color: cyan; }
+            100% { color: red; }
+        }
+
+        footer {
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 20px;
+            text-align: center;
+            width: 100%;
+        }
+
+        .social-icons img {
+            width: 30px;
+            margin: 0 10px;
+            vertical-align: middle;
+        }
+
+        .contact-form {
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 30px;
+            border-radius: 15px;
+            margin: 40px auto;
+            max-width: 600px;
+            width: 90%;
+        }
+
+        .contact-form h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1em;
+        }
+
+        .contact-form button {
+            background-color: #00aaff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1em;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        .contact-form button:hover {
+            background-color: #0077aa;
+        }
+
+        .confirmation {
+            text-align: center;
+            color: lightgreen;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+        #services {
+            max-width: 800px;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 40px;
+            border-radius: 20px;
+            margin: 60px auto;
+            text-align: center;
+        }
+
+        #services h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        #services p {
+            font-size: 1.2em;
+            line-height: 1.8;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="#accueil">Accueil</a>
+        <a href="#services">A propos de moi</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <div>
+        <h1>Bienvenus ches Consulteur</h1>
+        <a class="marco-link" href="Https://marcomabandwe.github.io/pro">Clic ici pour decouvrir l'univer de Marco</a>
+    </div>
+
+    <section id="services"> 
+        <h2>À propos de moi</h2>
+        <p>
+            Je suis Marco, un informaticien passionné avec plusieurs années d’expérience dans le domaine des technologies de l’information. Je conçois et développe des solutions informatiques performantes et adaptées aux besoins spécifiques de mes clients. Mon expertise couvre le développement web, la gestion de bases de données, le support technique et la sécurité informatique. Toujours à l'écoute, je mets un point d'honneur à vous offrir un service de qualité, rapide et professionnel.
+        </p>
+    </section>
+   
+
+    <footer>
+        <h3>Contact</h3>
+        <p>Email : mabandwemarco@gmail.com</p>
+        <p>Téléphone : +243 852591433</p>
+        <div class="social-icons">
+            <a href="https://www.facebook.com" target="_blank"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg" alt="Facebook"></a>
+            <a href="https://www.twitter.com" target="_blank"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/twitter.svg" alt="Twitter"></a>
+            <a href="https://www.linkedin.com" target="_blank"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" alt="LinkedIn"></a>
+            <a href="https://www.instagram.com" target="_blank"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" alt="Instagram"></a>
+            <a href="https://wa.me/2250123456789" target="_blank"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg" alt="WhatsApp"></a>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById("formContact").addEventListener("submit", function(e) {
+            e.preventDefault();
+
+            document.getElementById("confirmationMessage").innerText = "Merci de me contacter Marco, qu'est-ce que je peux faire pour vous ?";
+
+            e.target.reset();
+        });
+    </script>
+</body>
+</html>
